@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <mate charest="utf-8" />
+    <title>{{filename}} Invoice</title>
+  </head>
+  <body>
+    <h1 class="title">Mad Honey Nepal</h1>
+    <h3 class="subtitle">Invoice</h3>
+    <div class="content">
+      <p>{{date}}</p>
+      <div style="margin-top: 20px" />
+      <h6>Receiver Details:</h6>
+      <p class="name">{{firstname}} {{lastname}}</p>
+      <div class="row">
+        <h6>Address:</h6>
+        <p>{{address}}</p>
+      </div>
+      <div class="row">
+        <h6>Zip:</h6>
+        <p style="padding-left: 10px">{{zip}} {{city}}</p>
+      </div>
+      <div class="row">
+        <h6>City:</h6>
+        <p style="padding-left: 10px">{{city}}</p>
+      </div>
+      <div class="row">
+        <h6>State:</h6>
+        <p style="padding-left: 10px">{{state}}, ({{country}})</p>
+      </div>
+      <div class="row">
+        <h6>Phone:</h6>
+        <p>{{phone}}</p>
+      </div>
+      <div style="margin-top: 20px" />
+      <div class="row">
+        <h6>Courier:</h6>
+        <p>{{courier}}</p>
+      </div>
+      <div class="row">
+        <h6>Tracking code:</h6>
+        <p>{{trackingcode}}</p>
+      </div>
+      <div class="table-container">
+        <table>
+          <tr class="tablehead">
+            <td class="center">SN</td>
+            <td class="center">Particular</td>
+            <!-- <td class="center">Category</td> -->
+            <td class="center">Quantity</td>
+            <td class="center">Price</td>
+            <td class="center">Amount</td>
+          </tr>
+          <tr>
+            <td class="data">{{sn}}</td>
+            <td class="data">{{description}}</td>
+            <!-- <td class="data">{{category}}</td> -->
+            <td class="data">{{quantity}}</td>
+            <!-- <td class="data">{{sku}}</td> -->
+            <td class="data">USD {{price}}</td>
+            <td class="data">USD {{amount}}</td>
+          </tr>
+          <tr>
+            <td class="emptytd">{{empty}}</td>
+            <td class="emptytd">{{empty}}</td>
+            <td class="emptytd">{{empty}}</td>
+            <td class="emptytd">{{empty}}</td>
+            <td class="emptytd">{{empty}}</td>
+            <!-- <td class="emptytd">{{empty}}</td> -->
+          </tr>
+          <tr>
+            <td class="emptytd">{{empty}}</td>
+            <td class="emptytd">{{empty}}</td>
+            <td class="emptytd">{{empty}}</td>
+            <td class="emptytd">{{empty}}</td>
+            <!-- <td class="emptytd">{{empty}}</td> -->
+            <td class="emptytd">{{empty}}</td>
+          </tr>
+          <tr>
+            <td class="emptytd data">{{empty}}</td>
+            <!-- <td class="emptytd">{{empty}}</td> -->
+            <td class="data bold">Total</td>
+            <td class="noborderright data"></td>
+            <td class="noborderleft noborderright data"></td>
+            <td class="noborderleft data bold">USD {{amount}}</td>
+          </tr>
+        </table>
+        <div class="bottombar">
+          <div class="signature">
+            <p>Sender's signature</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <style>
+    h6,
+    h1,
+    p,
+    h3 {
+      margin: 0;
+    }
+    h6 {
+      font-weight: 500;
+    }
+    p,
+    td {
+      font-size: 12px;
+    }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h6 {
+      font-size: 14px;
+    }
+    .title {
+      text-align: center;
+    }
+    .subtitle {
+      text-align: center;
+      color: #444;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+    }
+    .space {
+      justify-content: space-between;
+    }
+    .row h6,
+    p {
+      display: inline;
+    }
+    table {
+      width: 100%;
+    }
+    tr {
+      display: flex;
+      align-self: stretch;
+    }
+    .tablehead {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #eee;
+    }
+    td {
+      border: 1px solid #ddd;
+      height: 20px;
+      padding: 3px 5px;
+      flex: 1;
+    }
+    td.center {
+      display: flex;
+      align-items: center;
+      /* justify-content: center; */
+      /* text-transform: uppercase; */
+      font-size: smaller;
+      /* font-weight: bold; */
+      color: #333;
+      letter-spacing: 0.03rem;
+    }
+    td.emptytd {
+      color: transparent;
+    }
+    .data {
+      font-size: 12px;
+    }
+    .content {
+      padding: 20px 20px;
+    }
+    .table-container {
+      margin-top: 20px;
+    }
+    .noborderleft {
+      border-left-color: transparent;
+    }
+    .noborderright {
+      border-right-color: transparent;
+    }
+    .name {
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+    .bottombar {
+      margin-top: 20px;
+    }
+    .signature {
+      display: flex;
+      align-self: stretch;
+      align-items: flex-end;
+      justify-content: flex-end;
+      margin-top: 30px;
+    }
+    .bold {
+      font-weight: bold;
+    }
+    .signature p {
+      border-top: 2px solid #555;
+      text-align: right;
+      width: 20%;
+    }
+  </style>
+</html>
