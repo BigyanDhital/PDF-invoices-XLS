@@ -24,7 +24,6 @@ const data = arrayOfData.slice(1).filter((row) => {
   return !!firstname;
 });
 
-console.log(data);
 console.log(`Printing ${data.length} pdfs`);
 // Read HTML Template
 const html = fs.readFileSync(`./invoice.html`, "utf8");
